@@ -1,6 +1,7 @@
-package com.sda.genericclass;
+package com.sda.genericclass.model;
+
 
 public interface Identifiable {
 
-    int getID();
+    String getID();
 }
