@@ -15,12 +15,12 @@ public class Main {
 
         Map<Character, List<Integer>> mapOcc = new HashMap<>();
 
-        for (int i = 0; i< input.length(); i++){
+        for (int i = 0; i < input.length(); i++) {
             char character = input.charAt(i);
 //            if (!mapOcc.containsKey(character)){
 //             mapOcc.put(character, new ArrayList<>());
 //            }
-            mapOcc.putIfAbsent(character,new ArrayList<>());
+            mapOcc.putIfAbsent(character, new ArrayList<>());
             mapOcc.get(character).add(i);
         }
         System.out.println(mapOcc);
