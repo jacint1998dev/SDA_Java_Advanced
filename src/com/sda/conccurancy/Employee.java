@@ -26,7 +26,7 @@ public class Employee extends Thread {
         }
     }
 
-    public void stopEmployee() {
+    public synchronized void stopEmployee() {
         System.out.println(name + " is time to go home!");
         if(SLEEP_TIME.get() > 21) {
             SLEEP_TIME.set(SLEEP_TIME.get() - 20);
