@@ -1,4 +1,4 @@
-package com.sda.File;
+package com.sda.files;
 
 import java.io.IOException;
 import java.nio.file.Files;
