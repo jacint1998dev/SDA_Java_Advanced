@@ -1,5 +1,5 @@
 out/
 *.txt
-*.cvs
+*.csv
 *.png
 *.xml
