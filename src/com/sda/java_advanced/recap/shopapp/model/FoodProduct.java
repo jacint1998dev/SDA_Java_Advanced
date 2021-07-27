@@ -20,8 +20,8 @@ public abstract class FoodProduct implements Sellable {
     public FoodProduct(Date expirationDate, boolean isBio, String countryOfOrigin) {
 
         //check if product is expired
-        if (expirationDate.after(Date.from(Instant.now()))){
-            throw new IllegalArgumentException("Product is expired!");
+        if (expirationDate.before(Date.from(Instant.now()))){
+            throw new IllegalArgumentException("Product is expired! " + expirationDate);
         }
         this.expirationDate = expirationDate;
         this.isBio = isBio;
