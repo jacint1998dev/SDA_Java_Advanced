@@ -1,4 +1,4 @@
-package com.sda.java_advanced_coding.exercises.ex12;
+package com.sda.java_advanced_coding.exercises.ex13;
 
 public class Manufacturer {
     private String name;
@@ -34,5 +34,14 @@ public class Manufacturer {
 
     public void setYearOfEstablishment(int yearOfEstablishment) {
         this.yearOfEstablishment = yearOfEstablishment;
+    }
+
+    @Override
+    public String toString() {
+        return "Manufacturer{" +
+                "name='" + name + '\'' +
+                ", yearOfEstablishment=" + yearOfEstablishment +
+                ", country='" + country + '\'' +
+                '}';
     }
 }
