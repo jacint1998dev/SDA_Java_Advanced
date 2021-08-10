@@ -1,8 +1,8 @@
 package com.sda.java_advanced_coding.exercises.ex23;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.TreeMap;
 
 public class Zoo {
     private Map<String, Integer> numberOfAnimalsBySpecies = new HashMap<>();
@@ -27,9 +27,13 @@ public class Zoo {
         }
     }
 
-    public Map<String,Integer> getAnimalsCountSorted(){
-        TreeMap<String ,Integer> sortedAnimalsByCount = new TreeMap<>();
-        sortedAnimalsByCount.putAll(numberOfAnimalsBySpecies);
-        return sortedAnimalsByCount;
+    public Map<String, Integer> getAnimalsCountSorted() {
+
+        LinkedHashMap<String, Integer> listOfAnimalsSorted = new LinkedHashMap<>();
+        numberOfAnimalsBySpecies.entrySet().stream()
+                .sorted((entry1, entry2) -> Integer.compare(entry2.getValue(),entry1.getValue()))
+                .forEach(entry -> listOfAnimalsSorted.put(entry.getKey(),entry.getValue()));
+
+        return listOfAnimalsSorted;
     }
 }
